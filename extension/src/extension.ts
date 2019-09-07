@@ -17,11 +17,14 @@ gmail.observe.before("send_message", (url, body, data, xhr) => {
     const from = data.from.address;
     const to = data.to;
 
+    //If sender email is not a U of T email
     if (!from.includes("@mail.utoronto.com")){
         for (let i = 0; i < to.length; i++){
+            //If one of the recipients is a U of T email
             if (to[i].address.includes("utoronto.ca")){
-                if(!confirm("Are you sure you want to send an email to U of T using a personal email")){
-                    throw Error("Canceling sending")
+                //Ask if this was a mistake
+                if(!confirm("Are you sure you want to send an email to U of T using your personal email?")){
+                    throw Error("User does not want to send email.")
                 } else {
                     break // Since use already confirmed once it was OK
                 }
