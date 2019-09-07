@@ -1,0 +1,21 @@
+{
+  "name": "gmail-extension",
+  "version": "1.0.0",
+  "description": "Warns you if you're sending an email with your personal email address to a work email address",
+  "main": "",
+  "dependencies": {
+    "gmail-js": "^0.9.9",
+    "jquery": "^3.4.1"
+  },
+  "devDependencies": {
+    "browserify": "^16.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "stage": "mkdir dist || echo Dist already exists.",
+    "bundle": "browserify -o dist/extension.js src/extension.js",
+    "build": "npm run stage && npm run bundle"
+  },
+  "author": "Martin Staadecker",
+  "license": "MIT"
+}
