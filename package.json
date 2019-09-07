@@ -8,12 +8,16 @@
     "jquery": "^3.4.1"
   },
   "devDependencies": {
-    "browserify": "^16.5.0"
+    "@types/jquery": "^3.3.31",
+    "@types/node": "^12.7.4",
+    "browserify": "^16.5.0",
+    "tsify": "^4.0.1",
+    "typescript": "^3.6.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "stage": "mkdir dist || echo Dist already exists.",
-    "bundle": "browserify -o dist/extension.js src/extension.js",
+    "bundle": "browserify -p tsify -o dist/extension.js src/extension.ts",
     "build": "npm run stage && npm run bundle"
   },
   "author": "Martin Staadecker",
