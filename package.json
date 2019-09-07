@@ -16,8 +16,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "stage": "mkdir dist || echo Dist already exists.",
-    "bundle": "browserify -p tsify -o dist/extension.js src/extension.ts",
+    "stage": "mkdir extension/dist || echo Dist already exists.",
+    "bundle": "browserify -p tsify -o extension/dist/extension.js extension/src/extension.ts",
     "build": "npm run stage && npm run bundle"
   },
   "author": "Martin Staadecker",
