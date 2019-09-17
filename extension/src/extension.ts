@@ -26,7 +26,7 @@ gmail.observe.before("send_message", (url, body, data, xhr) => {
                 if(!confirm("Are you sure you want to send an email to U of T using your personal email?")){
                     throw Error("User does not want to send email.")
                 } else {
-                    break // Since use already confirmed once it was OK
+                    break // Since user already confirmed once it was OK
                 }
             }
         }
