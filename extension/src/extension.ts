@@ -18,7 +18,7 @@ gmail.observe.before("send_message", (url, body, data, xhr) => {
     const to = data.to;
 
     //If sender email is not a U of T email
-    if (!from.includes("@mail.utoronto.com")){
+    if (!from.includes("utoronto.com")){
         for (let i = 0; i < to.length; i++){
             //If one of the recipients is a U of T email
             if (to[i].address.includes("utoronto.ca")){
