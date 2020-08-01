@@ -2,7 +2,6 @@
   "name": "gmail-extension",
   "version": "1.0.0",
   "description": "Warns you if you're sending an email with your personal email address to a work email address",
-  "main": "",
   "dependencies": {
     "gmail-js": "^0.9.9",
     "jquery": "^3.5.0"
