@@ -5,7 +5,7 @@
   "main": "",
   "dependencies": {
     "gmail-js": "^0.9.9",
-    "jquery": "^3.4.1"
+    "jquery": "^3.5.0"
   },
   "devDependencies": {
     "@types/jquery": "^3.3.31",
